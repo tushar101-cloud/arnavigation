@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AR Indoor Navigation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>AR Indoor Navigation</h1>
+    </header>
+
+    <main>
+        <section class="ar-container">
+            <div id="ar-scene"></div>
+        </section>
+
+        <section class="controls">
+            <div class="navigation-controls">
+                <button id="start-navigation">Start Navigation</button>
+                <button id="stop-navigation">Stop Navigation</button>
+            </div>
+            
+            <div class="location-controls">
+                <h3>Manage Locations</h3>
+                <div class="location-form">
+                    <input type="text" id="location-name" placeholder="Location Name">
+                    <input type="number" id="location-x" placeholder="X Coordinate">
+                    <input type="number" id="location-y" placeholder="Y Coordinate">
+                    <input type="number" id="location-z" placeholder="Z Coordinate">
+                    <textarea id="location-description" placeholder="Description"></textarea>
+                    <button id="save-location">Save Location</button>
+                </div>
+                <div id="locations-list"></div>
+            </div>
+        </section>
+
+        <section class="status-display">
+            <h3>Status</h3>
+            <div id="status-messages"></div>
+            <div id="position-display">
+                Current Position: <span id="current-position">Unknown</span>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
